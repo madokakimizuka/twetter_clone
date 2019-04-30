@@ -15,6 +15,7 @@ module TwitterClone
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
 
+    # ログレベルをinfoレベルに設定
     config.log_level = :info
 
   end
