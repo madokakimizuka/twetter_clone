@@ -1,19 +1,21 @@
-<h1>TWEETS</h1>
+<h3>一覧</h3>
 
 <p><%= notice %></p>
 
-<table>
-  <tr>
-    <th>tweet</th>
-  <tr/>
-
-  <% @tweets.each do |tweet| %>
+<div class="center">
+  <table>
     <tr>
-      <td><%= tweet.content %></td>
-      <td><%= link_to '編集', edit_tweet_path(tweet.id) %></td>
-      <td><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
-    </tr>
-  <% end %>
-</table>
+      <th>tweet</th>
+    <tr/>
 
-<%= link_to "new", new_tweet_path %>
+    <% @tweets.each do |tweet| %>
+      <tr>
+        <td><%= tweet.content %></td>
+        <td><%= link_to '編集', edit_tweet_path(tweet.id) %></td>
+        <td><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
+      </tr>
+    <% end %>
+  </table>
+<div class="center">
+<br>
+<%= link_to "新規作成", new_tweet_path %>

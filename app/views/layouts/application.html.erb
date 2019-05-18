@@ -9,6 +9,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header clearfix">
+      <h1>TwitterClone</h1>
+      <%= link_to '一覧', root_path %>
+      <%= link_to '新規作成', new_tweet_path %>
+    </div>
+
+    <div class="container">
+      <div class="content">
+
+      <%= yield %>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <%= link_to 'トップ', root_path %>
+    </div>
   </body>
 </html>
