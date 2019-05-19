@@ -17,9 +17,5 @@ module TwitterClone
 
     # ログレベルをinfoレベルに設定
     config.log_level = :info
-
-    # herokuにアップする際のPrecompiling assets failed.への対応
-    config.assets.initialize_on_precompile = false
-
   end
 end
